@@ -24,7 +24,7 @@ const modifyUser = (token, name, username) => {
     const user = { name, username }
 
     return (async () => {
-        const res = await fetch(`http://localhost:8000/api/users`, {
+        const res = await fetch(`${context.API_URL}/users`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

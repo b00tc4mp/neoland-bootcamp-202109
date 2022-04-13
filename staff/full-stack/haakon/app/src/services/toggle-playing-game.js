@@ -14,7 +14,7 @@ const togglePlayingGame = (token, gameId) => {
     if (typeof gameId !== 'string') throw new TypeError(`${gameId} is not a string`)
 
     return (async () => {
-        const res = await fetch(`http://localhost:8000/api/users/playing`, {
+        const res = await fetch(`${context.API_URL}/users/playing`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

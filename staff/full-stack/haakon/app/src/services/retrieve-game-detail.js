@@ -10,7 +10,7 @@ function retrieveGameDetail(gameId, token) {
     if (typeof gameId !== 'string') throw new TypeError(`${gameId} is not a string`)
 
     return (async () => {
-        const res = await fetch(`http://localhost:8000/api/games/${gameId}`, {
+        const res = await fetch(`${context.API_URL}/games/${gameId}`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

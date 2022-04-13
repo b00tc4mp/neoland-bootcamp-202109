@@ -11,9 +11,11 @@ const Register = ({ goToLogin }) => {
     const handleSubmit = async event => {
         event.preventDefault()
 
-        const name = event.target.name.value
-        const username = event.target.username.value
-        const password = event.target.password.value
+        const { target: {
+            name: { value: name },
+            username: { value: username },
+            password: { value: password }
+        } } = event
 
         try {
             showSpinner()

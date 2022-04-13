@@ -12,7 +12,7 @@ const searchGames = (query) => {
     if (query.trim() !== query) throw new Error('blank spaces around query')
 
     return (async () => {
-        const res = await fetch(`http://localhost:8000/api/games?q=${query}`, {
+        const res = await fetch(`${context.API_URL}/games?q=${query}`, {
             method: 'GET'
         })
 

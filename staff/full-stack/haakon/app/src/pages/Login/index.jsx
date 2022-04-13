@@ -5,7 +5,7 @@ import { authenticateUser } from '../../services'
 import AppContext from '../../context/AppContext'
 import { useContext } from 'react'
 
-const Login = ({ goToHome, goToRegister }) => {
+export default function Login({ goToHome, goToRegister }) {
     const { showSpinner, hideSpinner, showModal } = useContext(AppContext)
 
     const handleSubmit = async event => {
@@ -44,5 +44,3 @@ const Login = ({ goToHome, goToRegister }) => {
         </div>
     </>
 }
-
-export default Login

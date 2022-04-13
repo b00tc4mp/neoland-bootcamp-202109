@@ -19,7 +19,7 @@ const authenticateUser = (username, password) => {
     if (password.length < 6) throw new Error('password has less than 6 characters')
 
     return (async () => {
-        const res = await fetch(`http://localhost:8000/api/users/auth`, {
+        const res = await fetch(`${context.API_URL}/users/auth`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

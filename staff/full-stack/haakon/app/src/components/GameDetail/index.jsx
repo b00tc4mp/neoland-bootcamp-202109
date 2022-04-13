@@ -3,10 +3,8 @@ import { useContext, useEffect, useState } from "react"
 import AppContext from '../../context/AppContext'
 
 import './index.css'
-
 import { retrieveGameDetail, toggleFavGame } from "../../services"
-
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 const GameDetail = () => {
     const { showSpinner, hideSpinner, showModal } = useContext(AppContext)

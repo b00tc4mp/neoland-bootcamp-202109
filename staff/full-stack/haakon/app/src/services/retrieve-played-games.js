@@ -11,7 +11,7 @@ const retrievePlayedGames = (token) => {
     if (!/[a-zA-Z0-9\-_]+?\.[a-zA-Z0-9\-_]+?\.([a-zA-Z0-9\-_]+)$/.test(token)) throw new Error('invalid token')
 
     return (async () => {
-        const res = await fetch(`http://localhost:8000/api/users/played`, {
+        const res = await fetch(`${context.API_URL}/users/played`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

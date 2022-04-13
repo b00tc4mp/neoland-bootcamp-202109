@@ -1,4 +1,8 @@
-const { createLogger, transports: { File, Console }, format: { combine, timestamp, label, printf } } = require('winston')
+const {
+    createLogger,
+    transports: { File, Console },
+    format: { combine, timestamp, label, printf }
+} = require('winston')
 
 const myFormat = printf(({ level, message, label, timestamp }) => {
     return `[${label}] ${timestamp} ${level}: ${message}`;

@@ -1,13 +1,8 @@
 import './index.css'
-
 import Game from '../Game'
-
 import { searchGames } from '../../services'
-
 import { useContext, useEffect, useState } from 'react'
-
 import { useParams } from 'react-router-dom'
-
 import AppContext from '../../context/AppContext'
 
 const ListOfGames = ({ favGames, playingGames, playedGames }) => {

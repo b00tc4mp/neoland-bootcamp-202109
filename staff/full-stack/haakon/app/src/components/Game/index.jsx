@@ -58,6 +58,8 @@ const Game = ({ id, backgroundImage, name, platforms, genres, score, favGames, p
         }
     }
 
+    console.log(platforms)
+
     const handlePlayedGame = async () => {
         try {
             showSpinner()

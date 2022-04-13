@@ -39,12 +39,14 @@ const Home = ({ resetTokenAndGoToLanding }) => {
             (async () => {
                 try {
                     showSpinner()
-                    const user = await retrieveUser(token)
-                    const { username, favGames, playingGames, playedGames } = user
-                    setUsername(username)
-                    setFavGames(favGames)
-                    setPlayingGames(playingGames)
-                    setPlayedGames(playedGames)
+                    retrieveUser(token)
+                        .then(user => {
+                            const { username, favGames, playingGames, playedGames } = user
+                            setUsername(username)
+                            setFavGames(favGames)
+                            setPlayingGames(playingGames)
+                            setPlayedGames(playedGames)
+                        })
                     hideSpinner()
                 } catch ({ message }) {
                     resetTokenAndGoToLanding()

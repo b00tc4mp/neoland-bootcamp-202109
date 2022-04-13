@@ -11,7 +11,7 @@ const retrieveFavGames = (token) => {
     if (!/[a-zA-Z0-9\-_]+?\.[a-zA-Z0-9\-_]+?\.([a-zA-Z0-9\-_]+)$/.test(token)) throw new Error('invalid token')
 
     return (async () => {
-        const res = await fetch(`http://localhost:8000/api/users/favs`, {
+        const res = await fetch(`${context.API_URL}/users/favs`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

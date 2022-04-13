@@ -4,9 +4,9 @@ import context from './context'
  * Retrieve all games in data base.
  */
 
-const retrieveAllGames = (query) => {
+const retrieveAllGames = () => {
     return (async () => {
-        const res = await fetch(`http://localhost:8000/api/games/all`, {
+        const res = await fetch(`${context.API_URL}/games/all`, {
             method: 'GET'
         })
 
