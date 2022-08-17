@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+/* resets */
+
+* {
+    /* border: 1px dashed black; */
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: rgb(43, 43, 43);
+}
+
+
+.screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* compos */
+.container--title {
+
+    font-size: 50px;
+    color: white;
+    
+
+}
+
+.button {
+    border-radius: 5px;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.button--medium {
+    min-width: 5rem;
+}
+
+.button--dark {
+    background-color: black;
+    color: white;
+}
+.field {
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 3px;
+    padding: 10px;
+    font-size: 1rem;
+    margin: 5px;
+    border-color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signin, .signup, .landing, .post-signup {
+    background-color: rgb(27, 27, 27);
+    border: black;
+    border-style: solid;
+    color: white;
+    border-radius: 15px;
+    padding: 50px;
+    height: 400px;
+    width: 400px
+}
+.results{
+    background-color: rgb(68, 68, 68);
+    border: black;
+    border-style: solid;
+    border-radius: 15px;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.notfound {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(68, 68, 68);
+    border: black;
+    border-style: solid;
+    border-radius: 15px;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+}
+.result{
+    display: flex;
+    flex-direction: row;
+    border: black;
+    border-style: solid;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 15px;
+    width: 400px;
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+.container--gapped {
+    padding: 16px;
+}
+
+.results__image {
+    border: black;
+    border-style: solid;
+    height: 85px;
+    width: 85px;
+}
+.build {
+    background-color: rgb(68, 68, 68);
+    border: black;
+    border-style: solid;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.build__username {
+    display: flex;
+    align-items: flex-start;
+}
+.build__container {
+    background-color: rgb(68, 68, 68);
+    border: black;
+    border-style: solid;
+    border-radius: 15px;
+    padding: 25px;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+.items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.content {
+    color: white;
+}
+
+.champion--detail {
+    background-color: rgb(20, 20, 20);
+    padding: 25px;
+    border: black;
+    border-style: solid;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+}
+.container--vertical {
+    flex-direction: column;
+}
+
+.home__results {
+    list-style: none;
+}
+
+.home__result {
+    cursor: pointer;
+}
+
+.home__detail-image {
+    max-width: 80vw;
+}
+.nav-bar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    /* background-color: black; */
+}
+
+.nav--title {
+    font-size: 20px;
+    font-family: Bebas Neue;
+}
+
+/* modal */
+.modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000000; 
+}
+
+.modal__panel {
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    padding: 1rem;
+    color: black;
+    border-radius: 7px;
+    border: black;
+    border-style: solid;  
+}
+
+.modal__title {
+    color: inherit;
+}
+
+.modal__message {
+    color: inherit;
+    padding: 12px 0;
+    font-size: 30px;
+}
+
+.modal__button {
+    color: white;
+    background-color: black!important;
+}
