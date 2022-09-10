@@ -1,0 +1,27 @@
+{
+  "name": "demo-logic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha *.spec.js",
+    "test-inspect": "mocha --inspect *.spec.js",
+    "test-inspect-brk": "mocha --inspect-brk *.spec.js",
+    "test-coverage": "nyc --reporter=html --reporter=text mocha *.spec.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "dotenv": "^10.0.0",
+    "mocha": "^9.1.3",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "demo-data": "file:../demo-data",
+    "demo-errors": "file:../demo-errors",
+    "xmlhttprequest": "^1.8.0"
+  }
+}

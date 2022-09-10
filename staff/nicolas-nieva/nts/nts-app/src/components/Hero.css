@@ -1,0 +1,4 @@
+.Hero__image {
+    object-fit: cover;
+    min-height: 300px;
+  }
