@@ -1,4 +1,4 @@
-const { CredentialsError, ConflictError, FormatError, NotFoundError } = require('crowdaids-errors')
+const { CredentialsError, ConflictError, FormatError, NotFoundError } = require('../../../crowdaids-errors')
 const { JsonWebTokenError, TokenExpiredError } = require('jsonwebtoken')
 
 function handleError(error, res) {
@@ -12,7 +12,7 @@ function handleError(error, res) {
         status = 404
     else if (error instanceof ConflictError)
         status = 409
-
+    
     res.status(status).json({ error: error.message })
 }
 

@@ -11,6 +11,7 @@ const retrieveWindConditions = require('./retrieve-wind-conditions')
 const retrieveTides = require('./retrieve-tides')
 const toggleFavBeach = require('./toggle-fav-beach')
 const retrieveFavBeaches = require('./retrieve-fav-beaches')
+const getMostFavorites = require('./get-most-favorites')
 
 module.exports = {
     registerUser,
@@ -25,5 +26,6 @@ module.exports = {
     retrieveWindConditions,
     retrieveTides,
     toggleFavBeach,
-    retrieveFavBeaches
+    retrieveFavBeaches,
+    getMostFavorites
 }

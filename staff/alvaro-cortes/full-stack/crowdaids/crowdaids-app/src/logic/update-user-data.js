@@ -13,7 +13,7 @@ const { validateToken, validateData } = require('crowdaids-logic/helpers/validat
 
 function updateUserData(token, user) {
     validateToken(token)
-    validateData(user)
+    //validateData(user)
 
     return (async () => {
         const res = await fetch(`${context.API_URL}/users`, {

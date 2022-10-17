@@ -11,5 +11,6 @@ module.exports = {
     retrieveWindConditions: require('./retrieve-wind-conditions'),
     retrieveTides: require('./retrieve-tides'),
     toggleFavBeach: require('./toggle-fav-beach'),
-    retrieveFavBeaches: require('./retrieve-fav-beaches')
+    retrieveFavBeaches: require('./retrieve-fav-beaches'),
+    getMostFavorites: require('./get-most-favorites')
 }

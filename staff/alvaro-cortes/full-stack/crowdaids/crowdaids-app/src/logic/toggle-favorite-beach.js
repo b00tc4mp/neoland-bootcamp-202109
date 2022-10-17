@@ -40,7 +40,7 @@ function toggleFavoriteBeach(token, id, name) {
             else
                 favorites.splice(index, 1)
 
-            await fetch(`${process.env.REACT_APP_API_URL}/users/${name}/${id}`, {
+            await fetch(`${context.API_URL}/users/${name}/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Authorization': `Bearer ${token}`,

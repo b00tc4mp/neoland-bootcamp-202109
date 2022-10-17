@@ -37,7 +37,7 @@ function searchBeaches(token, query) {
 
             const { favorites } = user
 
-            const res2 = await fetch(`http://localhost:8000/api/forecast/site?q=${query}`, {
+            const res2 = await fetch(`${context.API_URL}/forecast/site?q=${query}`, {
                 method: 'GET'
             })
 

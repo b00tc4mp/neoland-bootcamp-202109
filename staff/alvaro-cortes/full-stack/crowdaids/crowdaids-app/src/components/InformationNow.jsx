@@ -37,7 +37,7 @@ function InformationNow({ maxMin, tide, wind, weather, swellDir, coordMap, arrS,
             <aside className="grid__center-aside1">
                 <div className="aside1--elements">
                     <span><h3>Surf altura</h3></span>
-                    <span className="actual--data">{maxMin()}</span>
+                    <span className="actual--data">{maxMin()} </span>
                 </div>
                 <div className="aside1--elements">
                     <span><h3>Marea</h3></span>
@@ -45,7 +45,14 @@ function InformationNow({ maxMin, tide, wind, weather, swellDir, coordMap, arrS,
                 </div>
                 <div className="aside1--elements">
                     <span><h3>Viento</h3></span>
-                    <span className="actual--data">{wind()}</span>
+                    <span className="actual--data actual--data2">
+                        <div className="arrow--wind__text" style={{ transform: `rotateZ(${arrW()}deg)` }}>
+                            <IconContext.Provider value={{ color: "green", size: "20px", className: "iconW" }} >
+                                <TiArrowDownOutline className="iconW" />
+                            </IconContext.Provider >
+                        </div>
+                        {wind()}
+                    </span>
                 </div>
                 <div className="aside1--elements">
                     <span><h3>Clima</h3></span>
@@ -53,7 +60,14 @@ function InformationNow({ maxMin, tide, wind, weather, swellDir, coordMap, arrS,
                 </div>
                 <div className="aside1--elements">
                     <span><h3>Oleaje</h3></span>
-                    <span className="actual--data">{swellDir()}</span>
+                    <span className="actual--data">
+                    <div className="arrow--swell__text" style={{ transform: `rotateZ(${arrS()}deg)` }}>
+                            <IconContext.Provider value={{ color: "orange", size: "20px", className: "iconS" }} >
+                                <ImArrowDown className="iconS" />
+                            </IconContext.Provider >
+                        </div>
+                        {swellDir()}
+                        </span>
                 </div>
             </aside>
         </div>

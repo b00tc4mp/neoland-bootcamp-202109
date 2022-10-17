@@ -13,7 +13,8 @@ const {
     retrieveWindConditions,
     retrieveTides,
     toggleFavBeach,
-    retrieveFavBeaches
+    retrieveFavBeaches,
+    getMostFavorites
 } = require('./handlers')
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -54,6 +55,8 @@ logger.info('Starting server');
 
         api.get('/users/favorites', retrieveFavBeaches)
 
+        api.get('/users/mostfavorites', getMostFavorites)
+
         api.get('/forecast/site', searchBeaches)
 
         api.get('/forecast/swell', retrieveSwellConditions)
@@ -83,4 +86,3 @@ logger.info('Starting server');
         console.error(error)
     }
 })()
-

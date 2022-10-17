@@ -7,6 +7,7 @@ import searchBeaches  from "./search-beaches";
 import retrieveBeach  from "./retrieve-beach";
 import toggleFavoriteBeach from "./toggle-favorite-beach";
 import retrieveFavoritesBeaches from "./retrieve-favorites-beaches";
+import retrieveMostFavs from "./retrieve-most-favs";
 import context from "./context"
 
 export {
@@ -19,5 +20,6 @@ export {
     retrieveBeach,
     toggleFavoriteBeach,
     retrieveFavoritesBeaches,
+    retrieveMostFavs,
     context
 }

@@ -2,8 +2,8 @@ require('dotenv').config()
 
 const { expect } = require('chai')
 const retrieveFavBeaches = require('./retrieve-fav-beaches')
-const { mongoose, models: { User } } = require('crowdaids-data')
-const { NotFoundError, FormatError } = require('crowdaids-errors')
+const { mongoose, models: { User } } = require('../crowdaids-data')
+const { NotFoundError, FormatError } = require('../crowdaids-errors')
 const { Types: { ObjectId } } = mongoose
 
 const { env: { MONGO_URL } } = process

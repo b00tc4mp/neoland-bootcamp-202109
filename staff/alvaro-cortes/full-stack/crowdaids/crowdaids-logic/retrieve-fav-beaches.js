@@ -2,6 +2,7 @@ const { validateId } = require('./helpers/validators');
 const { models: { User } } = require('crowdaids-data');
 const { NotFoundError } = require("crowdaids-errors");
 
+
 function retrieveFavBeaches(userId) {
     validateId(userId)
 
@@ -16,4 +17,4 @@ function retrieveFavBeaches(userId) {
     })()
 }
 
-module.exports = retrieveFavBeaches
+module.exports = retrieveFavBeaches;

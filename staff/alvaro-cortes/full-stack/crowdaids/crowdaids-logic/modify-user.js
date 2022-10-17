@@ -1,5 +1,5 @@
 const { mongoose, models: { User } } = require('crowdaids-data')
-const { validateId, validateData } = require('./helpers/validators')
+const { validateId, validateEmail, validateUsername, validateName } = require('./helpers/validators')
 const { NotFoundError, ConflictError, CredentialsError } = require('crowdaids-errors')
 const bcrypt = require('bcryptjs')
 
@@ -15,7 +15,6 @@ const bcrypt = require('bcryptjs')
 
 function modifyUser(id, data) {
     validateId(id)
-    validateData(data)
   
     return (async () => {
         const user = await User.findById(id)
@@ -34,8 +33,20 @@ function modifyUser(id, data) {
         for (const property in data)
             if (property === "password")
                 user[property] = bcrypt.hashSync(data[property])
-            else
+            else if (data[property] != "") {
+                switch(property) {
+                    case "name":
+                        validateName(data.name)
+                        break
+                    case "email":
+                        validateEmail(data.email)
+                        break
+                    case "username":
+                        validateUsername(data.username)
+                        break
+                }
                 user[property] = data[property]
+            } 
 
         try {
             await user.save()

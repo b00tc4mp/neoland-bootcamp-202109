@@ -1,4 +1,4 @@
-const { FormatError, ConflictError } = require('crowdaids-errors')
+const { FormatError, ConflictError } = require('./../../crowdaids-errors')
 
 function validateId(id) {
     if (typeof id !== 'string') throw new TypeError('id is not a string')

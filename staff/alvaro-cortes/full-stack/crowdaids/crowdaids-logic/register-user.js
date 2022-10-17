@@ -1,6 +1,6 @@
 const { validateName, validateUsername, validatePassword, validateEmail } = require('./helpers/validators')
-const { ConflictError } = require('crowdaids-errors')
-const { models: { User } } = require('crowdaids-data')
+const { ConflictError } = require('../crowdaids-errors')
+const { models: { User } } = require('../crowdaids-data')
 const bcrypt = require('bcryptjs')
 
 /**

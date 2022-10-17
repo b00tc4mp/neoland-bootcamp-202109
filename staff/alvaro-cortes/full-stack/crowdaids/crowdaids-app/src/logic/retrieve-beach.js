@@ -33,15 +33,23 @@ function retrieveBeach(token, id, name, breadCrumbs) {
 
             const { favorites } = user
 
-            const res2 = await fetch(`http://localhost:8000/api/forecast/swell?spotId=${id}&days=6&intervalHours=1`, {
-                method: 'GET'
+            let headers = new Headers();
+            headers.append('Content-Type', 'application/json');
+            headers.append('Accept', 'application/json');
+            headers.append('Access-Control-Allow-Origin', 'https://crowdaids.surge.sh/');
+            headers.append('Access-Control-Allow-Credentials', 'true');
+            headers.append('GET', 'POST', 'OPTIONS');
+
+            const res2 = await fetch(`${context.API_URL}/forecast/swell?spotId=${id}&days=6&intervalHours=1`, {
+                method: 'GET',
+                headers: headers
             })
 
             const { status } = res2
 
             if (status === 200) {
                 const swellCondition = await res2.json()
-                
+
                 const dataBeach = []
 
                 if (!swellCondition) throw new Error(`No swell conditions found with id ${id}`)
@@ -54,7 +62,7 @@ function retrieveBeach(token, id, name, breadCrumbs) {
 
                 dataBeach.push(swellCondition)
 
-                const res3 = await fetch(`http://localhost:8000/api/forecast/swelltext?spotId=${id}`, {
+                const res3 = await fetch(`${context.API_URL}/forecast/swelltext?spotId=${id}`, {
                     method: 'GET'
                 })
 
@@ -67,7 +75,7 @@ function retrieveBeach(token, id, name, breadCrumbs) {
 
                     dataBeach.push(swellConditionText)
 
-                    const res4 = await fetch(`http://localhost:8000/api/forecast/weather?spotId=${id}&days=6&intervalHours=1`, {
+                    const res4 = await fetch(`${context.API_URL}/forecast/weather?spotId=${id}&days=6&intervalHours=1`, {
                         method: 'GET'
                     })
 
@@ -80,7 +88,7 @@ function retrieveBeach(token, id, name, breadCrumbs) {
 
                         dataBeach.push(weatherCondition)
 
-                        const res5 = await fetch(`http://localhost:8000/api/forecast/tides?spotId=${id}&days=6`, {
+                        const res5 = await fetch(`${context.API_URL}/forecast/tides?spotId=${id}&days=6`, {
                             method: 'GET'
                         })
 
@@ -93,7 +101,7 @@ function retrieveBeach(token, id, name, breadCrumbs) {
 
                             dataBeach.push(tides)
 
-                            const res6 = await fetch(`http://localhost:8000/api/forecast/wind?spotId=${id}&days=6&intervalHours=1`, {
+                            const res6 = await fetch(`${context.API_URL}/forecast/wind?spotId=${id}&days=6&intervalHours=1`, {
                                 method: 'GET'
                             })
 
