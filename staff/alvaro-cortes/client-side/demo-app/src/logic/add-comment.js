@@ -1,9 +1,7 @@
 function addComent(token, id, text) {
     if (typeof token !== 'string') throw new TypeError(`${token} is not a string`)
     if (!/[a-zA-Z0-9\-_]+?\.[a-zA-Z0-9\-_]+?\.([a-zA-Z0-9\-_]+)$/.test(token)) throw new Error('invalid token')
-
     if (typeof id !== "string") throw new Error(`${id} is not a string`)
-
     if (typeof text !== "string") throw new Error(`${text} is not a string`)
 
     return (async () => {
