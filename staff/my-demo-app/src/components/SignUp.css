@@ -1,0 +1,67 @@
+.halfSignUp {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.signUp {
+    width: 70%;
+}
+
+.signUp__title {
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: var(--darkBlue);
+    margin-bottom: 0.1em;
+}
+
+.signUp__dontHave {
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--darkBlueTrans);
+    margin-bottom: 2em;
+}
+
+.labelAndInput {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.3em;
+}
+
+.labelAndInput:nth-of-type(4) {
+    margin-bottom: 2.3em;
+}
+
+.label {
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: var(--gray);
+    margin-left: 0.2em;
+    margin-bottom: 0.4em;
+}
+
+.input {
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--grayTrans);
+    border: none;
+    border-bottom: 1px solid var(--grayTrans);
+    font-family: inherit;
+}
+
+.btn {
+    width: 100%;
+    background: linear-gradient(
+        0deg,
+        rgba(131, 169, 215, 1) 0%,
+        rgba(57, 116, 185, 1) 100%
+    );
+    color: var(--white);
+    padding: 1em;
+    font-family: inherit;
+    border: none;
+    border-radius: 0.8em;
+    cursor: pointer;
+}

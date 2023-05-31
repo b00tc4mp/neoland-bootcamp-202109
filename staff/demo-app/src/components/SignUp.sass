@@ -1,0 +1,49 @@
+.register
+    background-color: #ffffff
+    width: 500px
+    padding: 20px 40px 50px
+    border-radius: 20px
+    margin: 50px auto
+
+
+    &__title
+        font-size: 2.5rem
+        text-align: center
+
+
+    &__title::before
+        content: "🙬 "
+
+
+    &__title::after
+        content: " 🙮"
+
+
+    &__subtitle
+        text-align: center
+        font-size: 1.4rem
+
+
+    &__inputInline
+        display: inline-block
+        width: 200px
+        margin-bottom: 20px
+
+
+    &__inputInline + .register__inputInline
+        margin-left: 16px
+
+
+    &__input
+        margin-bottom: 20px
+
+
+    &__inputCheck
+        text-align: center
+        margin-top: 30px
+        margin-bottom: 30px
+        font-size: 1.1rem
+
+
+    &__btn:first-of-type
+        margin-bottom: 20px
