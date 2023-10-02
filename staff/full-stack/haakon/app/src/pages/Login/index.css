@@ -1,0 +1,16 @@
+.login {
+    width: 80%;
+    margin: 1.5em auto 0;
+}
+
+.login__title {
+    text-align: center;
+}
+
+.loginForm__input {
+    margin-bottom: 1em;
+}
+
+.loginForm__btn {
+    margin-bottom: 1em;
+}

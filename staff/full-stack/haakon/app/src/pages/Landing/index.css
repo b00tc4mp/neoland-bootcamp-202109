@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+}
+
+.landing__title {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 0.8em;
+}
+
+.landing__description {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 1.5em;
+}
+
+.landing__btn {
+    margin-bottom: 1em;
+}

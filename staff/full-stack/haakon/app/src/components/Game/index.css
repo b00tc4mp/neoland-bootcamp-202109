@@ -1,0 +1,114 @@
+.gameCard {
+    background-color: #151515;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.6em;
+    overflow: hidden;
+}
+
+.gameCardBackground {
+    position: relative;
+}
+
+.gameCardBackground__img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: top;
+}
+
+.gameCardBackground__btnIcon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.gameCard .gameCardData {
+    padding: 1.4em 1.7em;
+}
+.gameCard .gameCardData .gameCardData__row-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.gameCardData__row-1__platforms {
+    font-size: 0.9rem;
+    margin-right: 1.5em;
+}
+
+.gameCardData__row-1__platforms > * {
+    font-size: 1.1rem;
+    margin-right: 0.4em;
+}
+
+.gameCardData__row-1__genres__item::before {
+    content: ", ";
+}
+
+.gameCardData__row-1__genres__item:first-child::before {
+    content: "";
+}
+
+.gameCardData__row-2 {
+    margin-bottom: 1em;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+}
+.gameCard .gameCardData .gameCardData__row-2 .gameCardLink {
+    color: inherit;
+    text-decoration: none;
+}
+
+.gameCardData__row-3 {
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnIconPlusTooltip {
+    position: relative;
+    /* padding: 0 2em; */
+    /* background-color: turquoise; */
+    /* opacity: 0.5; */
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 0;
+    right: -1px;
+}
+
+.tooltipClose {
+    position: absolute;
+    left: -16px;
+    top: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.tooltip__items {
+    background-color: var(--second);
+    border-radius: 0.4em;
+    overflow: hidden;
+}
+
+.tooltip__item {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.6em 1.2em;
+    transition: background-color 0.4s;
+    cursor: pointer;
+}
+
+.tooltip__item--active {
+    background-color: var(--first);
+}
+
+.tooltip__item:hover {
+    background-color: var(--third);
+}

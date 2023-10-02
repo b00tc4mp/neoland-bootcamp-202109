@@ -1,0 +1,6 @@
+POST http://localhost:8000/api/users/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MWI5MmU0N2RhNTdlOWNiYzZlYjdmYTAiLCJleHAiOjE2Mzk1MzAwNjYsImlhdCI6MTYzOTUyNjQ2Nn0.r_VJdz7E64BSA2IVapmOIt2F40wVQIrNr2hC-rUUAvU
+
+{
+    "gameId": "10"
+}

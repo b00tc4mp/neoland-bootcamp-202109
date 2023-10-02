@@ -1,0 +1,44 @@
+.aside {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: var(--first);
+    z-index: 10;
+}
+
+.xIcon {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.xIcon:hover {
+    color: var(--secondary);
+}
+
+.nav__list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.list__item:first-child {
+    margin-top: 2em;
+}
+
+.list__item {
+    margin-bottom: 1em;
+    cursor: pointer;
+    padding: 0.8em 1.5em;
+    margin-bottom: 0;
+    transition: background-color 0.4s;
+}
+
+.list__item:hover {
+    background-color: var(--fith);
+}
