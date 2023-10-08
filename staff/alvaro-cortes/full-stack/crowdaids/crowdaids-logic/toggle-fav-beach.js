@@ -15,21 +15,16 @@ function toggleFavBeach(idUser, idBeach, name) {
         const fav = user.favorites.filter(beach => beach.idBeach === idBeach)
 
         if (!fav.length) {
-
             const obj = {
                 idBeach: idBeach,
                 nameBeach: name
             }
             user.favorites.push(obj)
-        }
-
-        else {
+        } else {
             const fav1 = user.favorites.filter(beach => beach.idBeach !== idBeach)
-
             user.favorites = fav1
         }
         return user.save()
-
     })()
 }
 

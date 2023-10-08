@@ -23,7 +23,7 @@ function Home() {
     const [theme, setTheme] = useState('light')
     const [user, setUser] = useState(null)
     const [beach, setBeach] = useState({})
-    const [query, setQuery] = useState({})
+    const [query, setQuery] = useState('')
     const navigate = useNavigate()
 
     useEffect(async () => {
